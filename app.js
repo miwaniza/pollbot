@@ -1,7 +1,7 @@
 // Airtable API configuration
-const apiKey = 'keyA6n861FecmQuif';
-const baseId = 'app76qC01EGNfYeC7';
-const tableName = 'tblsoWJtDkxP4Wihj';
+const apiKey = process.env.AIRTABLE_APIKEY;
+const baseId = process.env.AIRTABLE_BASEID;
+const tableName = process.env.AIRTABLE_TABLEID;
 
 // Fetch image data from Airtable
 async function fetchImageData() {
