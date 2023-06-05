@@ -44,7 +44,7 @@ async function initApp() {
     console.log(swipedRight ? 'Liked' : 'Disliked');
 
     // Save the swipe action to Airtable
-    const ratingsTable = 'tblRZ4d4CGXoDNLgR';
+    const ratingsTable = process.env.AIRTABLE_RATINGS_TABLEID;
     fetch(`https://api.airtable.com/v0/${baseId}/${ratingsTable}`, {
       method: 'POST',
       headers: {
